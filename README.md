@@ -1,0 +1,1 @@
+# mazinger-repo-single-spec
