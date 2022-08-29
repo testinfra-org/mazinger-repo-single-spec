@@ -1,0 +1,118 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "defaultTitle",
+    "description": "defaultDescription",
+    "version": "0.1"
+  },
+  "servers": [
+    {
+      "url": "https://api.sunrise-sunset.org"
+    }
+  ],
+  "paths": {
+    "/json": {
+      "get": {
+        "description": "Auto generated using Swagger Inspector",
+        "parameters": [
+          {
+            "name": "lng",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "-4.4203400"
+          },
+          {
+            "name": "lat",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "36.7201600"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200"
+                },
+                "examples": {
+                  "0": {
+                    "value": "{\"results\":{\"sunrise\":\"7:02:05 AM\",\"sunset\":\"6:01:12 PM\",\"solar_noon\":\"12:31:39 PM\",\"day_length\":\"10:59:07\",\"civil_twilight_begin\":\"6:37:05 AM\",\"civil_twilight_end\":\"6:26:13 PM\",\"nautical_twilight_begin\":\"6:06:49 AM\",\"nautical_twilight_end\":\"6:56:28 PM\",\"astronomical_twilight_begin\":\"5:36:49 AM\",\"astronomical_twilight_end\":\"7:26:29 PM\"},\"status\":\"OK\"}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://api.sunrise-sunset.org"
+          }
+        ]
+      },
+      "servers": [
+        {
+          "url": "https://api.sunrise-sunset.org"
+        }
+      ]
+    }
+  },
+  "components": {
+    "schemas": {
+      "inline_response_200": {
+        "type": "object",
+        "properties": {
+          "results": {
+            "type": "object",
+            "properties": {
+              "sunrise": {
+                "type": "string"
+              },
+              "solar_noon": {
+                "type": "string"
+              },
+              "day_length": {
+                "type": "string"
+              },
+              "astronomical_twilight_end": {
+                "type": "string"
+              },
+              "astronomical_twilight_begin": {
+                "type": "string"
+              },
+              "sunset": {
+                "type": "string"
+              },
+              "civil_twilight_end": {
+                "type": "string"
+              },
+              "nautical_twilight_end": {
+                "type": "string"
+              },
+              "civil_twilight_begin": {
+                "type": "string"
+              },
+              "nautical_twilight_begin": {
+                "type": "string"
+              }
+            }
+          },
+          "status": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
